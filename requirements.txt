@@ -1,0 +1,3 @@
+pycrypto
+pytesseract
+requests

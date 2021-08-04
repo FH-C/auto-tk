@@ -1,0 +1,35 @@
+name: auto-study
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: 0 6 * * 3
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Install Python
+      run: |
+        sudo apt update && \
+        sudo apt install python3 && \
+        sudo apt install libopenjp2-7 && \
+        sudo apt install libtiff5 && \
+        sudo apt install tesseract-ocr
+
+    - name: Pip requirements
+      run: |
+        pip3 install -r requirements
+
+    - name: auto study
+      env:
+        USERNAME: ${{secrets.USERNAME}}
+        PASSWORD: ${{secrets.PASSWORD}}
+        PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}
+        MAX_TRIES: ${{secrets.MAX_TRIES}}
+      run: |
+        python3 main.py
