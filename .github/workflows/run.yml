@@ -34,4 +34,4 @@ jobs:
         PUBLIC_KEY: ${{secrets.PUBLIC_KEY}}
         MAX_TRIES: ${{secrets.MAX_TRIES}}
       run: |
-        python3 main.py
+        python3 main.py action
