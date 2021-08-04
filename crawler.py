@@ -44,7 +44,7 @@ def save_code_image():
 
 def crawl():
     times = 0
-    while times < settings.MAX_TRIES:
+    while times < int(settings.MAX_TRIES):
         save_code_image()
         code = get_code('code.jpg')
         if len(code) != 4:
@@ -56,5 +56,7 @@ def crawl():
             else:
                 times += 1
         except:
+            import traceback
+            traceback.print_exc()
             logging.info(f'尝试重新登录，重试次数{times}')
             times += 1
