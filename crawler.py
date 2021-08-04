@@ -55,8 +55,6 @@ def crawl():
                 break
             else:
                 times += 1
-        except:
-            import traceback
-            traceback.print_exc()
+        except RuntimeError:
             logging.info(f'尝试重新登录，重试次数{times}')
             times += 1
