@@ -36,9 +36,9 @@ docker run -e USERNAME="" -e PASSWORD="" auto-tk:1.0.0 -d
 2. 进入项目的Settings添加secrets
 - USERNAME
 - PASSWORD
-- PUBLIC_KEY
+- PUBLIC_KEY 可不填
 ```MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKf9iZkA5HEFw4zt7MRBkcmgUiz5+r5eqDOKbaurEbScmXd3ZZTtyzirqkYKRIH5mQ+8hq+Wd/pTZNXHS8L0+88CAwEAAQ==```
-- MAX_TRIES 默认为5
+- MAX_TRIES 默认为5 可不填
 3. 手动运行，测试是否可用
 
 ## 声明
