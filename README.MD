@@ -19,6 +19,10 @@ pip3 install setuptools wheel && \
 pip3 install Pillow && \
 pip3 install -r requirements.txt
 ```
+设置用户名和密码
+```
+export USERNAME=用户名 && export PASSWORD=密码
+```
 运行脚本
 ```
 python3 main.py
