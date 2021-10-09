@@ -31,7 +31,7 @@ def login(validate_code):
         logging.error(f'官方服务器发生异常,错误代码:{resp.status_code},信息:{resp.text}')
         raise RuntimeError('server error')
 
-    if '验证码错误' in resp.json().get('errmsg'):
+    if '验证码错误' in resp.json().get('errmsg') or '成功' not in resp.text:
         return False
     else :
         return True

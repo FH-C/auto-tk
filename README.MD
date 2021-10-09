@@ -32,7 +32,7 @@ python3 main.py
 ###### 2.docker部署
 ```
 docker build . -t auto-tk:1.0.0
-docker run -e USERNAME="" -e PASSWORD="" auto-tk:1.0.0 -d
+docker run -e USERNAME="" -e PASSWORD="" -d auto-tk:1.0.0
 ```
 引号内填入用户名以及密码
 ###### 3.Actions
